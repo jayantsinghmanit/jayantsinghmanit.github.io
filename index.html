@@ -1,808 +1,555 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rupesh Baroniya | PhD Researcher | MHD Flow & Heat Transfer</title>
-  <meta name="description" content="Rupesh Baroniya, PhD researcher in MHD flow and heat transfer, CFD, fusion energy systems." />
-  <meta name="keywords" content="Rupesh Baroniya, Baroniya, R Baroniya, MHD, CFD, heat transfer, MANIT Bhopal" />
-  <meta name="author" content="Rupesh Baroniya" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html><html lang="en"><head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<meta name="description" content="Academic personal website of Jayant Kumar, Ph.D. Research Scholar in Mechanical Engineering at MANIT Bhopal,  under the supervision of Dr. Deepak Kumar.">    
+<title>Jayant Kumar | Ph.D. Researcher | MANIT Bhopal</title>        
+<link rel="preconnect" href="https://fonts.googleapis.com">    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    html { scroll-behavior: smooth; }
+    <style>
+        :root {
+            --bg-color: #fafaf8;
+            --text-main: #1a1a1a;
+            --text-muted: #5a5a5a;
+            --primary-accent: #1a4068;
+            --primary-light: #e8f0f8;
+            --card-bg: #ffffff;
+            --border-color: #e2e2de;
+            --sidebar-bg: #f4f3ef;
+            --transition-speed: 0.3s;
+        }
+        body.dark-mode {
+            --bg-color: #111110;
+            --text-main: #e8e8e4;
+            --text-muted: #9a9a90;
+            --primary-accent: #7eb3e8;
+            --primary-light: #1a2535;
+            --card-bg: #1c1c1a;
+            --border-color: #2e2e2a;
+            --sidebar-bg: #161614;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            display: flex;
+        }
+        a { color: var(--primary-accent); text-decoration: none; transition: color var(--transition-speed); }
+        a:hover { text-decoration: underline; }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #ffffff;
-      color: #1f2937;
-      font-size: 14px;
-      line-height: 1.6;
-    }
+        .layout-wrapper { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; min-height: 100vh; }
 
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+        .sidebar {
+            width: 300px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            padding: 2.5rem 1.8rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+.profile-img-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem auto; /* Centers the circle horizontally in the sidebar */
+    flex-shrink: 0; /* Prevents the sidebar's flex layout from squishing the height */
+}
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Forces the image to fill the circle without stretching */
+    object-position: center top; /* Keeps the face in frame if the original image is tall */
+    display: block;
+        }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .sidebar-name { font-family: 'Crimson Pro', serif; font-size: 1.55rem; font-weight: 600; text-align: center; margin-bottom: 0.15rem; }
+        .sidebar-title { font-size: 0.88rem; color: var(--primary-accent); text-align: center; font-weight: 500; margin-bottom: 0.15rem; letter-spacing: 0.03em; text-transform: uppercase; }
+        .sidebar-inst { font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-bottom: 1.8rem; }
+        .sidebar-nav { list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+        .sidebar-nav a {
+            color: var(--text-muted); font-weight: 400; font-size: 0.92rem;
+            display: block; padding: 0.35rem 0.6rem; border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .sidebar-nav a:hover { color: var(--primary-accent); background: var(--primary-light); text-decoration: none; padding-left: 1rem; }
+        .theme-toggle-container { margin-top: auto; text-align: center; padding-top: 1rem; border-top: 1px solid var(--border-color); }
+        #theme-toggle {
+            background: none; border: 1px solid var(--border-color); cursor: pointer;
+            color: var(--text-muted); font-size: 0.88rem; padding: 0.4rem 1rem;
+            border-radius: 4px; width: 100%; transition: all var(--transition-speed); font-family: 'DM Sans', sans-serif;
+        }
+        #theme-toggle:hover { background-color: var(--card-bg); color: var(--text-main); }
 
-    /* ── NAVBAR ── */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: #fff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 0 1.5rem;
-    }
-    .navbar-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 52px;
-    }
-    .navbar-brand {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #2563eb;
-      white-space: nowrap;
-    }
-    .navbar-nav {
-      display: flex;
-      list-style: none;
-      gap: 0;
-    }
-    .navbar-nav a {
-      display: block;
-      padding: 0 0.75rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: #6b7280;
-      line-height: 52px;
-      white-space: nowrap;
-      transition: color 0.15s;
-    }
-    .navbar-nav a:hover { color: #111827; text-decoration: none; }
+        .content { flex: 1; padding: 3.5rem 5%; overflow-y: auto; }
+        section { margin-bottom: 3.5rem; }
+        .section-title {
+            font-family: 'Crimson Pro', serif; font-size: 1.7rem; font-weight: 600;
+            margin-bottom: 1.3rem; border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem; color: var(--text-main);
+        }
+        .text-body { font-size: 1rem; color: var(--text-muted); max-width: 800px; margin-bottom: 1rem; line-height: 1.75; }
 
-    /* ── HERO ── */
-    .hero {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 2.5rem;
-      display: grid;
-      grid-template-columns: 210px 1fr;
-      gap: 2.5rem;
-      align-items: flex-start;
-    }
-    .hero-avatar {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0;
-    }
-    .hero-avatar img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #e5e7eb;
-      display: block;
-      margin-bottom: 1rem;
-    }
-    .hero-avatar-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 0.2rem;
-      line-height: 1.3;
-    }
-    .hero-avatar-role {
-      font-size: 0.77rem;
-      color: #6b7280;
-      font-weight: 400;
-      line-height: 1.5;
-      margin-bottom: 0.6rem;
-    }
-    .hero-avatar-bio {
-      font-size: 0.8rem;
-      color: #4b5563;
-      line-height: 1.6;
-      margin-bottom: 0.9rem;
-    }
-    .hero-avatar-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-    .hero-avatar-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-      color: #2563eb;
-      font-weight: 500;
-      text-decoration: none;
-    }
-    .hero-avatar-links a:hover { text-decoration: underline; }
-    .hero-avatar-links a svg { flex-shrink: 0; }
-    .hero-body { flex: 1; }
-    .hero-body h1 {
-      font-size: 1.65rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 0.25rem;
-      line-height: 1.2;
-    }
-    .hero-role {
-      font-size: 0.9rem;
-      color: #6b7280;
-      font-weight: 500;
-      margin-bottom: 0.55rem;
-    }
-    .hero-bio {
-      font-size: 0.88rem;
-      color: #4b5563;
-      margin-bottom: 1rem;
-    }
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .hero-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.82rem;
-      color: #2563eb;
-      font-weight: 500;
-      transition: color 0.15s;
-      text-decoration: none;
-    }
-    .hero-links a:hover { color: #1d4ed8; text-decoration: underline; }
-    .hero-links a svg { flex-shrink: 0; }
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-    }
-    .stat-item { text-align: center; }
-    .stat-num {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #111827;
-      display: block;
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.73rem;
-      color: #9ca3af;
-      font-weight: 500;
-      margin-top: 3px;
-    }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0.8rem; margin-bottom: 1.8rem; }
+        .stat-card { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 1rem; border-radius: 6px; text-align: center; }
+        .stat-value { font-family: 'Crimson Pro', serif; font-size: 1.9rem; font-weight: 700; color: var(--primary-accent); margin-bottom: 0.15rem; }
+        .stat-label { font-size: 0.82rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.02em; }
 
-    /* ── SECTIONS ── */
-    .section {
-      border-top: 1px solid #e5e7eb;
-      padding: 2.5rem 1.5rem;
-      background: #fff;
-    }
-    .section-inner { max-width: 900px; margin: 0 auto; }
+        .news-list { list-style: none; }
+        .news-item { margin-bottom: 0.85rem; display: flex; gap: 1.2rem; align-items: baseline; }
+        .news-date { font-weight: 600; color: var(--primary-accent); min-width: 90px; font-size: 0.9rem; }
+        .news-text { color: var(--text-muted); font-size: 0.98rem; }
 
-    .section-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.6rem;
-      position: relative;
-    }
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 2.5rem;
-      height: 2px;
-      background: linear-gradient(90deg, #10b981, #059669);
-      border-radius: 2px;
-    }
-    .section-subtitle {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #374151;
-      margin-bottom: 0.75rem;
-      margin-top: 1.75rem;
-    }
-    .section-subtitle:first-of-type { margin-top: 0; }
+        .highlight-item { margin-bottom: 1.3rem; }
+        .highlight-title { font-family: 'Crimson Pro', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.25rem; }
+        .highlight-desc { color: var(--text-muted); font-size: 0.97rem; }
 
-    /* ── ABOUT ── */
-    .about-text {
-      font-size: 0.875rem;
-      color: #374151;
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-    }
+        .methods-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .method-tag {
+            background-color: var(--primary-light); color: var(--primary-accent);
+            padding: 0.35rem 0.8rem; border-radius: 3px; font-size: 0.88rem;
+            font-weight: 500; border: 1px solid rgba(26,64,104,0.18);
+        }
 
-    /* ── TAGS ── */
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .tag {
-      background: #eff6ff;
-      color: #1d4ed8;
-      font-size: 0.78rem;
-      font-weight: 500;
-      padding: 4px 12px;
-      border-radius: 999px;
-      border: 1px solid #bfdbfe;
-    }
-    /* skill tags (outlined pills) */
-    .tag-grey {
-      background: #fff;
-      color: #374151;
-      font-size: 0.78rem;
-      font-weight: 500;
-      padding: 4px 14px;
-      border-radius: 999px;
-      border: 1px solid #d1d5db;
-    }
+        .timeline { border-left: 2px solid var(--border-color); padding-left: 1.5rem; margin-left: 0.5rem; }
+        .timeline-item { position: relative; margin-bottom: 1.3rem; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -1.85rem; top: 0.4rem;
+            width: 10px; height: 10px; border-radius: 50%;
+            background-color: var(--primary-accent); border: 2px solid var(--bg-color);
+        }
+        .timeline-year { font-weight: 600; color: var(--text-main); margin-bottom: 0.15rem; font-size: 0.95rem; }
+        .timeline-content { color: var(--text-muted); font-size: 0.97rem; }
 
-    /* ── HIGHLIGHTS ── */
-    .highlights-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .highlights-list li {
-      font-size: 0.875rem;
-      color: #374151;
-      padding: 0.7rem 0 0.7rem 1.1rem;
-      border-bottom: 1px solid #f3f4f6;
-      position: relative;
-      line-height: 1.6;
-    }
-    .highlights-list li:last-child { border-bottom: none; }
-    .highlights-list li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: #2563eb;
-      font-size: 0.7rem;
-      top: 0.85rem;
-    }
+        .filter-controls { margin-bottom: 1.3rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .filter-btn {
+            background: none; border: 1px solid var(--border-color); cursor: pointer;
+            font-size: 0.85rem; color: var(--text-muted); padding: 0.35rem 0.75rem;
+            border-radius: 4px; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+        }
+        .filter-btn.active, .filter-btn:hover { background-color: var(--primary-accent); color: #fff; border-color: var(--primary-accent); }
 
-    /* ── PUB FILTER ── */
-    .pub-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1.25rem;
-    }
-    .pub-filters button {
-      background: #fff;
-      border: 1px solid #d1d5db;
-      padding: 5px 14px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: #6b7280;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.15s;
-    }
-    .pub-filters button.active,
-    .pub-filters button:hover {
-      background: #2563eb;
-      border-color: #2563eb;
-      color: #fff;
-    }
+        .publication-card { margin-bottom: 1.4rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border-color); }
+        .pub-authors { font-weight: 600; color: var(--text-main); margin-bottom: 0.15rem; font-size: 0.9rem; }
+        .pub-title { font-size: 1rem; margin-bottom: 0.15rem; color: var(--text-main); }
+        .pub-venue { font-style: italic; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.4rem; }
+        .indexing-badges { display: flex; gap: 0.4rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+        .badge { font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 3px; font-weight: 600; background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-muted); }
+        .badge.scie-q1 { border-color: #28a745; color: #28a745; }
+        .badge.scie-q2 { border-color: #17a2b8; color: #17a2b8; }
+        .badge.inpress { border-color: #f59e0b; color: #d97706; background-color: #fffbeb; }
+        .pub-links a { font-size: 0.88rem; margin-right: 1rem; }
 
-    /* ── PUBLICATION CARDS ── */
-    .pub-list { display: flex; flex-direction: column; }
-    .pub-card {
-      padding: 1rem 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .pub-card:last-child { border-bottom: none; }
-    .pub-title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 0.2rem;
-      line-height: 1.5;
-    }
-    .pub-authors {
-      font-size: 0.82rem;
-      color: #6b7280;
-      margin-bottom: 0.2rem;
-    }
-    .pub-authors strong { color: #111827; font-weight: 600; }
-    .pub-venue {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-    .pub-venue a { color: #2563eb; font-weight: 500; }
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 1px 7px;
-      border-radius: 3px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-    .badge-press { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .profiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem; }
+        .profile-card {
+            display: flex; align-items: center; gap: 0.8rem; padding: 0.85rem;
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 6px; color: var(--text-main); transition: border-color 0.2s;
+            font-size: 0.92rem;
+        }
+        .profile-card:hover { border-color: var(--primary-accent); text-decoration: none; }
+        .profile-card i { font-size: 1.3rem; color: var(--primary-accent); flex-shrink: 0; }
 
-    /* ── CONFERENCES ── */
-    .conf-note {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-bottom: 0.85rem;
-    }
-    .conf-list {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap: 0.6rem;
-    }
-    .conf-list li {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      padding: 0.65rem 0.9rem;
-      font-size: 0.82rem;
-      color: #374151;
-    }
-    .conf-list li strong {
-      display: block;
-      color: #1d4ed8;
-      font-size: 0.8rem;
-      margin-bottom: 1px;
-    }
+        .contact-block {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            padding: 1.8rem; border-radius: 6px; font-size: 0.98rem;
+        }
+        .contact-block p { margin-bottom: 0.45rem; color: var(--text-muted); }
+        .contact-block i { width: 22px; color: var(--primary-accent); }
 
-    /* ── EDUCATION ── */
-    .edu-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-    }
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    .edu-degree { font-size: 1rem; font-weight: 700; color: #111827; }
-    .edu-inst { font-size: 0.85rem; color: #6b7280; margin-top: 2px; }
-    .edu-year {
-      background: #eff6ff;
-      color: #1d4ed8;
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 3px 12px;
-      border-radius: 999px;
-      border: 1px solid #bfdbfe;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .edu-detail {
-      font-size: 0.83rem;
-      color: #4b5563;
-      margin-top: 0.4rem;
-      line-height: 1.65;
-    }
-    .edu-detail strong { color: #374151; }
+        .edu-item { margin-bottom: 0.9rem; }
+        .edu-degree { font-weight: 600; color: var(--text-main); font-size: 0.97rem; }
+        .edu-inst { color: var(--text-muted); font-size: 0.9rem; }
 
-    /* ── LEADERSHIP ── */
-    .role-card {
-      padding: 1.1rem 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .role-card:last-child { border-bottom: none; }
-    .role-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.2rem;
-    }
-    .role-title { font-size: 0.92rem; font-weight: 700; color: #111827; }
-    .role-badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 3px;
-      background: #d1fae5;
-      color: #065f46;
-      border: 1px solid #a7f3d0;
-    }
-    .role-sub {
-      font-size: 0.82rem;
-      color: #6b7280;
-      margin-bottom: 0.45rem;
-    }
-    .role-sub a { color: #2563eb; }
-    .role-desc {
-      font-size: 0.845rem;
-      color: #4b5563;
-      line-height: 1.65;
-    }
+        /* Leadership & Service */
+        .service-item {
+            margin-bottom: 1.4rem; padding: 1.2rem 1.4rem;
+            background: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 6px; border-left: 3px solid var(--primary-accent);
+        }
+        .service-role { font-weight: 600; color: var(--text-main); font-size: 0.98rem; margin-bottom: 0.2rem; }
+        .service-org { font-size: 0.88rem; color: var(--primary-accent); margin-bottom: 0.4rem; font-style: italic; }
+        .service-desc { font-size: 0.93rem; color: var(--text-muted); line-height: 1.65; }
 
-    /* ── PROFESSIONAL SERVICE ── */
-    .service-list { display: flex; flex-direction: column; gap: 0.6rem; }
-    .service-item {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-      font-size: 0.855rem;
-      color: #374151;
-      line-height: 1.55;
-    }
-    .service-item strong { color: #111827; }
-    .service-count { color: #6b7280; font-size: 0.82rem; }
+        /* Technical Skills */
+        .skills-section { margin-bottom: 1.5rem; }
+        .skills-category { font-weight: 600; color: var(--text-main); font-size: 0.9rem; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .skills-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+        .skill-tag {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            color: var(--text-muted); padding: 0.3rem 0.75rem;
+            border-radius: 3px; font-size: 0.85rem; font-weight: 500;
+        }
 
-    /* ── CURRENT RESEARCH BOX ── */
-    .current-research {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      margin-top: 1.75rem;
-    }
-    .current-research h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #1e40af;
-      margin-bottom: 0.6rem;
-    }
-    .current-research p {
-      font-size: 0.855rem;
-      color: #1e3a8a;
-      line-height: 1.7;
-    }
+        /* Reviewer table */
+        .reviewer-list { list-style: none; }
+        .reviewer-item { display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 0; border-bottom: 1px solid var(--border-color); font-size: 0.93rem; }
+        .reviewer-item:last-child { border-bottom: none; }
+        .reviewer-journal { color: var(--text-main); font-weight: 500; }
+        .reviewer-publisher { color: var(--text-muted); font-size: 0.85rem; }
+        .reviewer-count { background: var(--primary-light); color: var(--primary-accent); padding: 0.2rem 0.55rem; border-radius: 3px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
 
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 1.75rem 1.5rem;
-      font-size: 0.8rem;
-      color: #9ca3af;
-      border-top: 1px solid #e5e7eb;
-      background: #fff;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      .hero { grid-template-columns: 1fr; align-items: center; text-align: center; }
-      .hero-avatar { align-items: center; }
-      .hero-avatar-links { align-items: center; }
-      .hero-stats { justify-content: center; }
-      .navbar-nav { display: none; }
-      .edu-header { flex-direction: column; }
-    }
-  </style>
+        @media (max-width: 992px) {
+            .layout-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border-color); padding: 2rem 5%; align-items: center; }
+            .profile-img-container { width: 120px; height: 120px; }
+            .sidebar-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+            .sidebar-nav a { border-bottom: none; }
+            .theme-toggle-container { width: 100%; max-width: 260px; }
+        }
+    </style>
 </head>
 <body>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="profile-img-container">
+                <img src="profile.jpg" alt="Jayant Kumar Profile Photograph">
+            </div>
+            <h1 class="sidebar-name">Jayant Kumar</h1>
+            <div class="sidebar-title">Research Scholar</div>
+            <div class="sidebar-inst">Mechanical Engineering<br>MANIT Bhopal</div>
+            <ul class="sidebar-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#profiles">Research Profiles</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#cv">Education</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#skills"> Technical Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle-container">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i> Dark Mode</button>
+            </div>
+        </aside>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="navbar-inner">
-    <span class="navbar-brand">Rupesh Baroniya</span>
-    <ul class="navbar-nav">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#responsibility">Leadership</a></li>
-      <li><a href="#service">Professional Service</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </div>
-</nav>
+        <main class="content">
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-avatar">
-    <img src="https://rbaroniya.github.io/rupesh-baroniya.JPG" alt="Rupesh Baroniya" />
-    <div class="hero-avatar-name">Rupesh Baroniya</div>
-    <div class="hero-avatar-role">PhD Researcher | MHD Flow &amp; Heat Transfer | CFD &amp; Fusion Applications</div>
-    <p class="hero-avatar-bio">Working on magnetohydrodynamic flow and heat transfer for fusion energy systems using CFD and dimensionless modeling.</p>
-    <div class="hero-avatar-links">
-      <a href="mailto:rupeshbaroniya19@gmail.com">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
-        rupeshbaroniya19@gmail.com
-      </a>
-      <a href="https://scholar.google.com/citations?user=64YAciYAAAAJ&hl=en" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
-        Google Scholar
-      </a>
-      <a href="https://orcid.org/0000-0001-5683-183X" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 7h6M9 12h6M9 17h4"/></svg>
-        ORCID
-      </a>
-      <a href="https://www.linkedin.com/in/rupeshbaroniya" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
+            <!-- About -->
+            <section id="about">
+                <h2 class="section-title">About</h2>
+                <p class="text-body">I am a Ph.D. Research Scholar in the Department of Mechanical Engineering at Maulana Azad National Institute of Technology (MANIT), Bhopal, under the supervision of Dr. Deepak Kumar (Assistant Professor). My research focuses on understanding the mechanical behavior, stability, failure, and mechanobiology of soft biological tissues through analytical modeling, constitutive theory, finite element simulations, and experimental validation. The primary objective of my Ph.D. research is to investigate the role of fiber–matrix and fiber-dispersion interactions in governing the deformation, instability, and failure mechanisms of biological tissues.</p>
+                <p class="text-body">My proposed Ph.D. thesis is entitled “Role of Fiber-Matrix Coupling  in the Mechanobiology of Tissues: Modeling with Experimental Validations.” The work combines theoretical mechanics, nonlinear elasticity, and experiments to establish structure–function relationships in soft tissues.</p>
+                
+            </section>
+
+            <!-- Research Profiles -->
+            <section id="profiles">
+                <h2 class="section-title">Research Profiles</h2>
+                <div class="profiles-grid">
+                    <a href="https://scholar.google.com/citations?hl=en&user=dlLLzbAAAAAJ" target="_blank" class="profile-card"><i class="fas fa-graduation-cap"></i><span>Google Scholar</span></a>
+                    <a href="https://orcid.org/0009-0008-9154-771X" target="_blank" class="profile-card"><i class="fab fa-orcid"></i><span>ORCID</span></a>
+                    <a href="#" target="_blank" class="profile-card"><i class="fas fa-book"></i><span>Scopus<br><small>ID: 59716623200</small></span></a>
+                    <a href="https://www.researchgate.net/profile/Jayant-Kumar-62" target="_blank" class="profile-card"><i class="fab fa-researchgate"></i><span>ResearchGate</span></a>
+                    <a href="https://www.linkedin.com/in/jayant-kumar-2533a63b0" target="_blank" class="profile-card"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                </div>
+            </section>
+
+            <!-- News -->
+            <section id="news">
+                <h2 class="section-title">News</h2>
+                <ul class="news-list">
+                    <li class="news-item"><div class="news-date"> May 2026</div><div class="news-text">Published in <em>Mechanics of Materials</em>.</div></li>
+                    <li class="news-item"><div class="news-date">April 2026</div><div class="news-text">Paper published in <em>Results in Engineering</em>.</div></li>
+                </ul>
+            </section>
+
+            <!-- Research Highlights -->
+            <section id="research">
+                <h2 class="section-title">Research Highlights</h2>
+                <div class="highlight-item">
+                    <div class="highlight-title">Biomechanics</div>
+                    <div class="highlight-desc"> Mechanobiological investigation of soft biological tissues through constitutive modeling, finite element simulations, and experimental validation, with emphasis on fiber–matrix coupling, fiber dispersion, failure mechanisms, instability phenomena, and mullins stress-softening behavior in biological tissues.</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-title">Morpho-Elasticity</div>
+                    <div class="highlight-desc">Analytical modeling of growth, remodeling, and structural failure mechanisms in complex biological systems like bamboo.</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-title">Renewable Energy</div>
+                    <div class="highlight-desc">Exploring biomass gasification and the thermo-kinetic implications of pyrolysis-based sustainable energy production.</div>
+                </div>
+
+                <h2 class="section-title" style="margin-top:2rem;">Research Methods</h2>
+                <div class="methods-tags">
+                    <span class="method-tag">Analytical Modeling</span>
+                    <span class="method-tag">Continuum Mechanics</span>
+                    <span class="method-tag">Hyperelastic Constitutive Modeling</span>
+                    <span class="method-tag">Experimental Validation</span>
+                    <span class="method-tag">Finite Element Methods</span>
+                    <span class="method-tag">Thermo-Kinetic Analysis</span>   
+                </div>
+
+                <h2 class="section-title" style="margin-top:2rem;">Research Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-year">2026</div><div class="timeline-content">Published multiple high-impact papers in biomechanics, focusing on limit point instability and morpho-elastic behavior.</div></div>
+                    <div class="timeline-item"><div class="timeline-year">2025</div><div class="timeline-content">Published in <em>Mechanics of Materials</em> and <em>Mechanics Research Communications</em>, validating Mullins stress-softening in tissue samples.</div></div>
+                    <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-content">Published comprehensive review on biomass gasification and joined MANIT as a PhD Candidate.</div></div>
+                </div>
+            </section>
+
+            <!-- Publications -->
+            <section id="publications">
+                <h2 class="section-title">Publications</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="journal">Journal</button>
+                    <button class="filter-btn" data-filter="inpress"> In press</button>
+                    <button class="filter-btn" data-filter="conference">Conference / Book Chapter</button>
+                </div>
+
+                <div class="publications-list">
+
+                    <!--  UNDER REVIW -->
+                    <div class="publication-card pub-item" data-type="under review">
+                        <div class="pub-authors">Kumar J., et al </div>
+                        <div class="pub-title">Swift-Poynting transition in torsion of soft tissues governed by fiber-matrix invariant coupling.</div>
+                        <div class="pub-venue">Extreme Mechanics Letters, 2026.</div>
+                        <div class="indexing-badges">
+                            <span class="badge inpress">UNDER REVIW</span>
+                            <span class="badge SCIE Q1">SCIE Q1</span>
+                            <span class="badge">Scopus Indexed</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https:-------" target="_blank">[DOI:----]</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card pub-item" data-type="underreview">
+                        <div class="pub-authors">Kumar J., Kumar D. </div>
+                        <div class="pub-title">Transition from Swift-type to Poynting-type response in torsion of fiber-dispersed soft tissues.</div>
+                        <div class="pub-venue">International Journal of Engineering Science, 2026.</div>
+                        <div class="indexing-badges">
+                            <span class="badge inpress">UNDER REVIW</span>
+                            <span class="badge SCIE Q1">SCIE Q1</span>
+                            <span class="badge">Scopus Indexed</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https:-------" target="_blank">[DOI:----]</a>
+                        </div>
+                    </div>
+
+                    <!-- Journal Papers -->
+
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., Kumar D.</div>
+                        <div class="pub-title">Role of fiber dispersion in the torsion-induced Poynting effect of biological tissues.</div>
+                        <div class="pub-venue">Mechanics of Materials, 2026.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q1">SCIE Q1</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1016/j.mechmat.2026.105728" target="_blank">[DOI: 10.1016/j.mechmat.2026.105728]</a></div>
+                    </div>
+                    
+                    
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., Kumar D.</div>
+                        <div class="pub-title">Modeling for the role of fiber-matrix coupling on the torsion-induced Poynting effect in biological tissues.</div>
+                        <div class="pub-venue">Mechanics of Materials, 2025.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q1">SCIE Q1</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1016/j.mechmat.2025.105470" target="_blank">[DOI: 10.1016/j.mechmat.2025.105470]</a></div>
+                    </div>
+
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., Kumar D.</div>
+                        <div class="pub-title">Modeling and experimental validation of Mullins stress-softening in male and female mice skins.</div>
+                        <div class="pub-venue">Mechanics Research Communications, 2025.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q2">SCIE Q2</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1016/j.mechrescom.2025.104406" target="_blank">[DOI: 10.1016/j.mechrescom.2025.104406]</a></div>
+                    </div>
+
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., Kumar D.</div>
+                        <div class="pub-title">Role of Fiber-Matrix Coupling on Limit Point Instability in Pressurized Finitely Extensible Biological Tube.</div>
+                        <div class="pub-venue">International Journal of Applied Mechanics, 2026.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q2">SCIE Q2</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1142/S1758825126500316" target="_blank">[DOI: 10.1142/S1758825126500316]</a></div>
+                    </div>
+
+                     <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., Kumar D.</div>
+                        <div class="pub-title">Modeling the Role of Fiber-Matrix Coupling on the Failure of Biological Tissues.</div>
+                        <div class="pub-venue">International Journal of Applied Mechanics, 2025.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q2">SCIE Q2</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1142/S1758825125500875" target="_blank">[DOI: 10.1142/S1758825125500875]</a></div>
+                    </div>
+
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., et al.</div>
+                        <div class="pub-title">Analytical Modeling of Morpho-Elastic Behavior and Failures in Bamboo.</div>
+                        <div class="pub-venue">International Journal of Applied Mechanics, 2026.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q2">SCIE Q2</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1142/S1758825126500407" target="_blank">[DOI: 10.1142/S1758825126500407]</a></div>
+                    </div>
+
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., et al.</div>
+                        <div class="pub-title">Pyrolysis-induced lignin transformation and its thermo-kinetic implications for biochar development.</div>
+                        <div class="pub-venue">Results in Engineering, 2026.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q1">SCIE Q1</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1016/j.rineng.2026.110216" target="_blank">[DOI: 10.1016/j.rineng.2026.110216]</a></div>
+                    </div>
+                    
+                    <div class="publication-card pub-item" data-type="journal">
+                        <div class="pub-authors">Kumar J., et al.</div>
+                        <div class="pub-title">Comprehensive review of biomass utilization and gasification for sustainable energy production.</div>
+                        <div class="pub-venue">Environment, Development and Sustainability, 2024.</div>
+                        <div class="indexing-badges"><span class="badge SCIE Q1">SCIE Q1</span><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1007/s10668-023-04127-7" target="_blank">[DOI: 10.1007/s10668-023-04127-7]</a></div>
+                    </div>
+
+                    <!-- Conference / Book Chapter -->
+                    <div class="publication-card pub-item" data-type="conference">
+                        <div class="pub-authors">Kumar J., et al.</div>
+                        <div class="pub-title">Review on Downdraft Gasifier and Gas Filtration Units by Using Localized Biomass to Generate Power.</div>
+                        <div class="pub-venue">Springer Proceedings in Energy (Book Chapter), 2025.</div>
+                        <div class="indexing-badges"><span class="badge">Scopus Indexed</span></div>
+                        <div class="pub-links"><a href="https://doi.org/10.1007/978-981-97-6548-5_40" target="_blank">[DOI: 10.1007/978-981-97-6548-5_40]</a></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Education / CV -->
+            <section id="cv">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024 – Present</div>
+                        <div class="timeline-content">
+                            <strong>Ph.D. Candidate, Mechanical Engineering</strong><br>
+                            Maulana Azad National Institute of Technology (MANIT), Bhopal
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">M.Tech.</div>
+                        <div class="timeline-content">
+                            <strong>Mechanical Engineering</strong><br>
+                            Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">B.E.</div>
+                        <div class="timeline-content">
+                            <strong>Mechanical Engineering</strong><br>
+                            Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="#" class="filter-btn active" style="text-decoration: none;"><i class="fas fa-file-pdf"></i> Download Full CV</a>
+                </div>
+            </section>
+
+            <!-- Leadership & Service -->
+            <section id="leadership">
+                <h2 class="section-title">Leadership &amp; Service</h2>
+
+                <div class="service-item">
+                    <div class="service-role">Group Coordinator – Examination Control Room (ECR)</div>
+                    <div class="service-org">Department of Mechanical Engineering, MANIT Bhopal &nbsp;·&nbsp; Ongoing</div>
+                    <div class="service-desc">Lead and coordinate Examination Control Room operations across UG and PG examinations. Responsible for assigning duties to PhD scholars, supervising control room activities, and ensuring smooth, fair, and disciplined conduct of examinations.</div>
+                </div>
+                
+            </section>
+
+            
+
+            <!-- Technical Skills -->
+            <section id="skills">
+                <h2 class="section-title">Technical Skills</h2>
+
+
+                <div class="skills-category">Data & Analysis</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Origin</span>
+                </div>
+
+                <div class="skills-category">Simulation</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Finite Element Method (FEM)</span>
+                </div>
+
+
+                <div class="skills-category">Documentation & Web</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">LaTeX</span>
+                    <span class="skill-tag">HTML &amp; CSS</span>
+                    <span class="skill-tag">Technical Writing</span>
+                </div>
+            </section>
+
+
+            <!-- Contact -->
+            <section id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-block">
+                    <p><strong>Jayant Kumar</strong></p>
+                    <p><i class="fas fa-building"></i> Department of Mechanical Engineering</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Maulana Azad National Institute of Technology (MANIT)</p>
+                    <p style="padding-left: 26px; margin-bottom: 1.2rem;">Bhopal, Madhya Pradesh, India</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:24316011112@stu.manit.ac.in">24316011112@stu.manit.ac.in</a></p>
+                    <p><i class="fas fa-mobile"></i> <a href="Contact:+917828189667">+917828189667</a></p>
+                    <p><i class="fab fa-orcid"></i> <a href="https://orcid.org/0009-0008-9154-771X" target="_blank">0009-0008-9154-771X</a></p>
+                </div>
+            </section>
+
+        </main>
     </div>
-  </div>
-  <div class="hero-body">
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">11+</span>
-        <div class="stat-label">Papers</div>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">30+</span>
-        <div class="stat-label">Citations</div>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">3</span>
-        <div class="stat-label">h-index</div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="section-inner">
-    <h2 class="section-title">About</h2>
-    <p class="about-text">PhD researcher in Mechanical Engineering with expertise in computational fluid dynamics (CFD), magnetohydrodynamics (MHD), heat transfer, and multiphysics flow modeling. My doctoral research focuses on high-fidelity numerical simulation of complex flow geometries including sudden expansions, bends, T-junctions, and disaligned channels, with particular emphasis on liquid metal MHD flows and heat transfer for fusion energy applications. Proficient in ANSYS Fluent, OpenFOAM, and finite volume method (FVM)-based solvers. Published 11+ peer-reviewed papers as first and corresponding author in SCIE/Scopus-indexed journals and actively serving as a reviewer for International Journal of Heat and Mass Transfer, Physics of Fluids, and Transport Phenomena.</p>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            }
+        });
 
-    <h3 class="section-subtitle">Research Interests</h3>
-    <div class="tag-list">
-      <span class="tag">Magnetohydrodynamics (MHD)</span>
-      <span class="tag">Computational Fluid Dynamics (CFD)</span>
-      <span class="tag">Heat Transfer</span>
-      <span class="tag">Laminar &amp; Turbulent Flow</span>
-      <span class="tag">Liquid Metal Cooling</span>
-      <span class="tag">Multiphysics Flow Modeling</span>
-      <span class="tag">Thermal &amp; Energy Systems</span>
-      <span class="tag">Finite Volume Method (FVM)</span>
-      <span class="tag">Flow Optimization (RSM)</span>
-    </div>
+        document.querySelectorAll('.sidebar-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) targetElement.scrollIntoView({ behavior: "smooth" });
+            });
+        });
 
-    <h3 class="section-subtitle" id="research">Research Highlights</h3>
-    <ul class="highlights-list">
-      <li>Developed dimensionless MHD models for sudden and gradual channel expansions, quantifying Hartmann and Reynolds number effects on pressure drop and velocity distributions</li>
-      <li>Investigated wall conductivity (insulating vs. conducting) and inclined magnetic field effects on MHD flow and heat transfer in square ducts relevant to fusion blanket channel design</li>
-      <li>Applied Response Surface Methodology (RSM) for optimization of thermal and hydrodynamic performance in MHD heat transfer configurations</li>
-      <li>Characterized electric current redistribution and Lorentz force localization in expansion geometries relevant to flow control in fusion cooling systems</li>
-    </ul>
-  </div>
-</section>
-
-<!-- PUBLICATIONS -->
-<section class="section" id="publications">
-  <div class="section-inner">
-    <h2 class="section-title">Publications</h2>
-    <div class="pub-filters">
-      <button class="active" onclick="filterPubs('all',this)">All</button>
-      <button onclick="filterPubs('journal',this)">Journals</button>
-      <button onclick="filterPubs('conference',this)">Conferences &amp; Book Chapters</button>
-      <button onclick="filterPubs('inpress',this)">In Press</button>
-    </div>
-    <div class="pub-list" id="pubList">
-
-      <div class="pub-card" data-type="journal">
-        <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">International Communications in Heat and Mass Transfer, 2025 &bull; <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" target="_blank">DOI: 10.1016/j.icheatmasstransfer.2025.108746</a></div>
-      </div>
-
-      <div class="pub-card" data-type="journal">
-        <div class="pub-title">Electric current redistribution and Lorentz force localization in magnetohydrodynamic flow through a sudden expansion</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">Journal of Process Mechanical Engineering, 2026 &bull; <a href="https://journals.sagepub.com/doi/full/10.1177/09544089261444779" target="_blank">DOI: 10.1177/09544089261444779</a></div>
-      </div>
-
-      <div class="pub-card" data-type="journal">
-        <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
-        <div class="pub-venue">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 &bull; <a href="https://doi.org/10.1080/15567036.2026.2642403" target="_blank">DOI: 10.1080/15567036.2026.2642403</a></div>
-      </div>
-
-      <div class="pub-card" data-type="journal">
-        <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 &bull; <a href="https://doi.org/10.1007/S40997-025-00902-1" target="_blank">DOI: 10.1007/S40997-025-00902-1</a></div>
-      </div>
-
-      <div class="pub-card" data-type="journal">
-        <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
-        <div class="pub-venue">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 &bull; <a href="https://doi.org/10.1080/15567036.2024.2433156" target="_blank">DOI: 10.1080/15567036.2024.2433156</a></div>
-      </div>
-
-      <div class="pub-card" data-type="conference">
-        <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
-        <div class="pub-venue">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 &bull; <a href="https://doi.org/10.1007/978-981-99-5755-2_40" target="_blank">DOI: 10.1007/978-981-99-5755-2_40</a></div>
-      </div>
-
-      <div class="pub-card" data-type="conference">
-        <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
-        <div class="pub-venue">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 &bull; <a href="https://doi.org/10.1615/ihmtc-2023.1620" target="_blank">DOI: 10.1615/ihmtc-2023.1620</a></div>
-      </div>
-
-      <div class="pub-card" data-type="conference">
-        <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">Advances in Multidisciplinary Analysis and Optimization 2024 &bull; <a href="https://doi.org/10.1007/978-981-95-1723-7_50" target="_blank">DOI: 10.1007/978-981-95-1723-7_50</a></div>
-      </div>
-
-      <div class="pub-card" data-type="conference">
-        <div class="pub-title">Numerical Investigation of Magnetohydrodynamic Flow in a Disaligned Channel with a Transverse Magnetic Field</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">Recent Advancements in Thermo-Fluidic and Energy Engineering 2026 &bull; <a href="https://doi.org/10.1007/978-981-95-3698-6_6" target="_blank">DOI: 10.1007/978-981-95-3698-6_6</a></div>
-      </div>
-
-      <div class="pub-card" data-type="conference">
-        <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">Proceedings of the 3rd International Conference on Recent Advances in Fluid Mechanics and Nanoelectronics, 2025 &bull; <a href="https://doi.org/10.1007/978-981-92-0603-2_1" target="_blank">DOI: 10.1007/978-981-92-0603-2_1</a></div>
-      </div>
-
-      <div class="pub-card" data-type="inpress">
-        <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel <span class="badge badge-press">In Press</span></div>
-        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-        <div class="pub-venue">Lecture Notes in Physics, 2026</div>
-      </div>
-
-    </div>
-
-    <!-- CONFERENCES -->
-    <h3 class="section-subtitle" style="margin-top:2rem;">Selected Conferences &amp; Presentations</h3>
-    <p class="conf-note">Presented research papers at multiple international conferences including IITs, IISc, NITs and international venues in Thailand.</p>
-    <ul class="conf-list">
-      <li><strong>ICRAFMN-2025</strong>Kasetsart University, Thailand</li>
-      <li><strong>iNCMDAO-2024</strong>IISc Bengaluru</li>
-      <li><strong>FMFP-2022</strong>IIT Roorkee</li>
-      <li><strong>IHMTC-2023</strong>IIT Patna</li>
-      <li><strong>Anusandhan 2.0-2024</strong>IIT Mandi</li>
-      <li><strong>ICRAME-2025</strong>NIT Silchar</li>
-      <li><strong>ICRAPS-2026</strong>NIT Uttarakhand</li>
-      <li><strong>ICET-2023</strong>MANIT Bhopal</li>
-    </ul>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="section" id="education">
-  <div class="section-inner">
-    <h2 class="section-title">Education</h2>
-    <div class="edu-card">
-      <div class="edu-header">
-        <div>
-          <div class="edu-degree">PhD in Mechanical Engineering</div>
-          <div class="edu-inst">Maulana Azad National Institute of Technology Bhopal, India</div>
-        </div>
-        <span class="edu-year">2022 – Present</span>
-      </div>
-      <div class="edu-detail">
-        <div><strong>Advisor:</strong> Dr. Manoj Arya and Dr. Narendra Gajbhiye</div>
-        <div><strong>Thesis Title:</strong> "Numerical Investigations of Magnetohydrodynamic Flow and Heat Transfer in Channels"</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section class="section" id="responsibility">
-  <div class="section-inner">
-    <h2 class="section-title">Leadership &amp; Service</h2>
-
-    <div class="role-card">
-      <div class="role-header">
-        <div class="role-title">Group Coordinator – Examination Control Room (ECR)</div>
-        <span class="role-badge">Ongoing Responsibility</span>
-      </div>
-      <div class="role-sub">Department of Mechanical Engineering, MANIT Bhopal</div>
-      <p class="role-desc">Lead and coordinate Examination Control Room operations across UG and PG examinations. Responsible for assigning duties to PhD scholars, supervising control room activities, and ensuring smooth, fair, and disciplined conduct of examinations.</p>
-    </div>
-
-    <div class="role-card">
-      <div class="role-header">
-        <div class="role-title">Workshop Coordinator – CFD (Karyashala)</div>
-      </div>
-      <div class="role-sub"><a href="https://sites.google.com/view/karyashala/home" target="_blank">Workshop Website</a></div>
-      <p class="role-desc">Coordinated and managed the Computational Fluid Dynamics workshop under the Karyashala initiative. Designed and developed the official workshop website and handled participant coordination, session organization, and technical support throughout the program.</p>
-    </div>
-
-    <div class="role-card">
-      <div class="role-header">
-        <div class="role-title">Lecture Delivered – Faculty Development Program (FDP)</div>
-      </div>
-      <div class="role-sub">Topic: Simulation using ANSYS</div>
-      <p class="role-desc">Delivered a lecture in a Faculty Development Program focusing on numerical simulation using ANSYS, including simulation workflow, solver setup, and research applications.</p>
-    </div>
-
-    <div class="role-card">
-      <div class="role-header">
-        <div class="role-title">Organizing Committee Member – SDGs and Research Symposium</div>
-      </div>
-      <div class="role-sub">Five-Day Workshop on Sustainable Development Goals</div>
-      <p class="role-desc">Contributed to the organization and coordination of the workshop and research symposium focused on sustainable development goals, interdisciplinary research, and academic engagement in association with Madhya Pradesh NITI Aayog and GIZ India.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROFESSIONAL SERVICE -->
-<section class="section" id="service">
-  <div class="section-inner">
-    <h2 class="section-title">Professional Service</h2>
-    <div class="service-list">
-      <div class="service-item">
-        <strong>Reviewer</strong> for <strong>International Journal of Heat and Mass Transfer (Elsevier)</strong><br/>
-        <span class="service-count">Reviewed 5 manuscripts.</span>
-      </div>
-      <div class="service-item">
-        <strong>Reviewer</strong> for <strong>Physics of Fluids (AIP Publishing)</strong><br/>
-        <span class="service-count">Reviewed 1 manuscripts.</span>
-      </div>
-      <div class="service-item">
-        <strong>Reviewer</strong> for <strong>Transport Phenomena (De Gruyter Brill)</strong><br/>
-        <span class="service-count">Reviewed 3 manuscripts.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section" id="skills">
-  <div class="section-inner">
-    <h2 class="section-title">Skills</h2>
-    <div class="tag-list">
-      <span class="tag-grey">ANSYS</span>
-      <span class="tag-grey">OpenFOAM</span>
-      <span class="tag-grey">Anupravaha (MHD)</span>
-      <span class="tag-grey">Finite Volume Method (FVM)</span>
-      <span class="tag-grey">MATLAB</span>
-      <span class="tag-grey">Tecplot</span>
-      <span class="tag-grey">Origin</span>
-      <span class="tag-grey">Response Surface Methodology (RSM)</span>
-      <span class="tag-grey">CATIA</span>
-      <span class="tag-grey">SolidWorks</span>
-      <span class="tag-grey">Creo</span>
-      <span class="tag-grey">LaTeX</span>
-      <span class="tag-grey">HTML &amp; CSS</span>
-      <span class="tag-grey">Technical Writing</span>
-    </div>
-
-    <div class="current-research">
-      <h3>Current Research</h3>
-      <p>Currently investigating entropy generation in magnetohydrodynamic (MHD) channel flows to analyze thermodynamic irreversibilities arising from viscous effects. The work incorporates entropy-based analysis using parameters such as the Bejan number to distinguish between heat transfer and fluid friction contributions. The study aims to optimize flow and thermal performance in fusion-relevant channel configurations through a dimensionless framework.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  &copy; 2026 Rupesh Baroniya &bull; PhD Researcher, MANIT Bhopal, India
-</footer>
-
-<script>
-  function filterPubs(type, btn) {
-    document.querySelectorAll('.pub-filters button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('#pubList .pub-card').forEach(card => {
-      card.style.display = (type === 'all' || card.dataset.type === type) ? '' : 'none';
-    });
-  }
-</script>
+        const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+        const pubItems = document.querySelectorAll('.pub-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filterType = btn.getAttribute('data-filter');
+                pubItems.forEach(item => {
+                    if (filterType === 'all' || item.getAttribute('data-type') === filterType) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
